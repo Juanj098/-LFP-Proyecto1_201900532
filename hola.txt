@@ -1,0 +1,49 @@
+    def __init__(self,*Args, **kwargs) -> None:
+        self.wnd = Tk()
+        self.wnd.title('proyecto no. 1')
+        self.wnd.geometry('500x500')
+        self.wnd.config(bg = "#5b3347")
+        self.win_P()
+
+    def win_P(self):
+        self.frame.mainloop()
+
+
+    # def init_widgets(self):
+    #     tk.Label(
+    #         self,
+    #         text = 'Proyecto no.1',
+    #         justify = tk.CENTER,
+    #         font = ('arial',16),
+    #         bg='#404754'
+    #         ).pack(
+    #             side=tk.TOP,
+    #             fill=tk.BOTH,
+    #             expand= True,
+    #             padx=22,
+    #             pady=11
+    #         )
+        # optionsFrame = tk.Frame(self)
+        # optionsFrame.configure(
+        #     bg='white'
+        # )
+        # optionsFrame.pack(
+        #     side=tk.TOP,
+        #     fill=tk.BOTH,
+        #     expand=True,
+        #     padx = 22,
+        #     pady=11
+        # )
+        # boton1 = tk.Button(
+        #             optionsFrame,
+        #             text='boton1'
+        #         ).pack(
+        #             side=tk.TOP
+        #         )
+        # boton2 = tk.Button(
+        #             optionsFrame,
+        #             text='boton2'
+        #         ).pack(
+        #             side=tk.TOP
+        #         )
+        
