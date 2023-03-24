@@ -1,12 +1,13 @@
 {
         {
             "Operacion":"Suma" 
-            "Valor1":4.5 
+            "Valor1":4.80 
             "Valor2":5.322
         }, 
         {
             "Operacion":"Resta" 
-            "Valor1":4.5 "Valor2": [ 
+            "Valor1":4.5 
+	    "Valor2": [ 
                 "Operacion":"Potencia" 
                 "Valor1":10 
                 "Valor2":3
@@ -25,6 +26,11 @@
         "Color-Fuente-Nodo":"Rojo"
         "Forma-Nodo":"Circulo"
 }
+
+
+
+
+
 
 
 

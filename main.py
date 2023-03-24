@@ -3,10 +3,13 @@ from aritmeticas import *
 from trigonometricas import *
 from lexema import *
 from numeros import *
+from operaciones import Datos_O
+from operaciones import list_operaciones
+import inspect
 
 doc = 'datos.json'
-
 lexemas = list(reserv.values())
+
 
 global n_lineas
 global n_col
@@ -67,9 +70,8 @@ def instruccion(cadena):
             cadena = cadena[1:]
             puntero = 0
             n_col += 1
-
-    for lex in list_lexemas:
-        print(lex)
+    
+    return list_lexemas
 
 def armar_no(cadena):
     token = ''
@@ -136,8 +138,10 @@ def operar_():
         else:
             break
     
-    for instruccion in instrucciones:
-        print('-?',instruccion.operar(None))
+    # for instruccion in instrucciones:
+    #     print('-?',instruccion.operar(None))
+
+    return instrucciones
 
 cont = '''{
     {
@@ -178,7 +182,10 @@ cont = '''{
     "Color-Fuente-Nodo":"Rojo"
     "Forma-Nodo":"Circulo"
 }'''
+ 
 
 
-instruccion(cont)
-operar_()
+# instruccion(cont)
+# operar_()
+
+

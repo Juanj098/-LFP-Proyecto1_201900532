@@ -3,7 +3,10 @@ from fileinput import filename
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 from tkinter.tix import Tree 
-
+from main import operar_, instruccion
+from operaciones import Datos_O
+from operaciones import list_operaciones
+list_O = list_operaciones
 class Home(tk.Frame):
 
     def __init__(self,parent,controller):
@@ -62,7 +65,8 @@ class Home(tk.Frame):
             text='Analizar',
             font=('Jetbrains mono',10),
             width=15,
-            height=2
+            height=2,
+            command=self.analizar
         )
         btn3.grid(row=3,column=0,padx=3,pady=3)
         btn4 = tk.Button(
@@ -123,6 +127,18 @@ class Home(tk.Frame):
         except:
             print('Variable vacia')
             
+    def analizar(self):
+        instruccion(self.txt)
+        resp = operar_()
+        for r in resp:
+            Data =Datos_O(r.getTipo(),r.getLeft(),r.getRight(),r.operar(None))
+            list_operaciones.append(Data)
+        
+        for l in list_operaciones:
+            print(f'->> {l.ret()}')
+             
+
+
 
         
 class Proy(tk.Frame):

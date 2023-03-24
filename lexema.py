@@ -14,3 +14,6 @@ class Lexema(expression):
     
     def getFila(self):
         return super().getFila()
+    
+    def getLexema(self):
+        return self.lexema

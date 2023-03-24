@@ -1,5 +1,7 @@
 from abs import *
-
+from numeros import numeros
+from operaciones import Datos_O
+from trigonometricas import Trigonometrica
 class Aritmetica(expression):
     
     def __init__(self, izq,der,tipo,fila,columna) -> None:
@@ -40,3 +42,30 @@ class Aritmetica(expression):
     
     def getFila(self):
         return super().getFila()  
+    
+    def getLeft(self):
+        if self.izq != None:
+            x = isinstance(self.izq,numeros)
+            y = isinstance(self.izq,Aritmetica)
+            z = isinstance(self.izq,Trigonometrica)
+            if x == True:
+                return self.izq.getNum()
+            else:
+                return self.izq.getNum()
+
+        else:
+            return None
+        
+    def getRight(self):
+        if self.der != None:
+            x = isinstance(self.der,numeros)
+            y = isinstance(self.der,Aritmetica)
+            if x == True:
+                return self.der.getNum()
+            elif y == True:
+                return Datos_O(self.der.getTipo(),self.der.getLeft(),self.der.getRight(),self.der.operar(None))
+        else:
+            return None
+    
+    def getTipo(self):
+        return self.tipo

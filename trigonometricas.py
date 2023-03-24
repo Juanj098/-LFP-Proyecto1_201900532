@@ -1,5 +1,7 @@
 from abs import *
 from math import * 
+from numeros import numeros
+from operacionestri import datatri
 
 class Trigonometrica(expression):
 
@@ -26,3 +28,13 @@ class Trigonometrica(expression):
     
     def getFila(self):
         return super().getFila()
+    
+    def getNum(self):
+        x = isinstance(self.left,numeros)
+        if x == True:
+            return datatri(self.left.getNum(),self.getTipo())
+        else:
+            return self.left
+    
+    def getTipo(self):
+        return self.tipo

@@ -14,3 +14,7 @@ class numeros(expression):
     
     def getFila(self):
         return super().getFila()
+    
+    def getNum(self):
+        return self.valor
+    
