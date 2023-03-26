@@ -1,31 +1,84 @@
 {
-        {
-            "Operacion":"Suma" 
-            "Valor1":4.80 
-            "Valor2":5.322
-        }, 
-        {
-            "Operacion":"Resta" 
-            "Valor1":4.5 
+    {
+        "Operacion":"Suma" 
+        "Valor1":4.80 
+        "Valor2":5.322
+    }, 
+    {
+        "Operacion":"Resta" 
+        "Valor1":4.5 
 	    "Valor2": [ 
-                "Operacion":"Potencia" 
-                "Valor1":10 
-                "Valor2":3
-        ]}, 
-        {
-            "Operacion":"Suma" 
-            "Valor1":[ 
-                "Operacion":"Seno" 
-                "Valor1":90
-            ] 
-            "Valor2":5.32 
-        }
+        "Operacion":"Potencia" 
+        "Valor1":10 
+        "Valor2":4
+    ]},	 
+    {
+        "Operacion":"Suma" 
+        "Valor1":[ 
+            "Operacion":"Tangente" 
+            "Valor1":90
+        ] 
+        "Valor2":5.32 
+    },
+	{
+	    "Operacion":"Suma"
+	    "Valor1":5
+        "Valor2":5
+	},
+    {
+        "Operacion":"Suma" 
+        "Valor1":[ 
+            "Operacion":"Seno" 
+            "Valor1":90
+        ] 
+        "Valor2":5.32 
+    },
+    {
+        "Operacion":"Resta"
+        "Valor1":2
+        "Valor2":[
+            "Operacion":"Seno"
+            "Valor1":3.1
+    ]},
+    {
+        "Operacion":"Suma" 
+        "Valor1":[ 
+            "Operacion":"Seno" 
+            "Valor1":3.1
+        ] 
+        "Valor2":2 
+    }, 
 
         "Texto":"Realizacion de Operaciones" 
-        "Color-Fondo-Nodo":"Amarillo" 
-        "Color-Fuente-Nodo":"Rojo"
+        "Color-Fondo-Nodo":"Rojo" 
+        "Color-Fuente-Nodo":"Blanco"
         "Forma-Nodo":"Circulo"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

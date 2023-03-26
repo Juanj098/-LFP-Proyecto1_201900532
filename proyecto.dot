@@ -1,0 +1,46 @@
+
+        digraph G{
+            rankdir = TB
+	        fontname="Helvetica,Arial,sans-serif"
+	        node [fontname="Helvetica,Arial,sans-serif"]
+            edge [fontname="Helvetica,Arial,sans-serif"]
+        	node [shape = "circle" color = "#ff0000" style = filled fontcolor = "#f8f5ff"]
+			subgraph cluster0{
+				nodo1[label=<<table><tr><td>Suma</td></tr><tr><td>10.122</td></tr></table>>]
+				nodo8[label="4.8"]
+				nodo16[label="5.322"]
+			}
+			subgraph cluster1{
+				nodo2[label=<<table><tr><td>Resta</td></tr><tr><td>-9995.5</td></tr></table>>]
+				nodo9[label="4.5"]
+				nodoY17[label=<<table><tr><td>Potencia</td></tr><tr><td>10000</td></tr></table>>]
+				nodoY20[label="10"]				nodoY28[label="4"]			}
+			subgraph cluster2{
+				nodo3[label=<<table><tr><td>Suma</td></tr><tr><td>3.325</td></tr></table>>]
+				nodoB10[label=<<table><tr><td>Tangente</td></tr><tr><td>-1.995</td></tr></table>>]
+				nodoB13[label ="90"]
+				nodo18[label="5.32"]
+			}
+			subgraph cluster3{
+				nodo4[label=<<table><tr><td>Suma</td></tr><tr><td>10</td></tr></table>>]
+				nodo11[label="5"]
+				nodo19[label="5"]
+			}
+			subgraph cluster4{
+				nodo5[label=<<table><tr><td>Suma</td></tr><tr><td>6.214</td></tr></table>>]
+				nodoB12[label=<<table><tr><td>Seno</td></tr><tr><td>0.894</td></tr></table>>]
+				nodoB15[label ="90"]
+				nodo20[label="5.32"]
+			}
+			subgraph cluster5{
+				nodo6[label=<<table><tr><td>Resta</td></tr><tr><td>1.958</td></tr></table>>]
+				nodo13[label="2"]
+				nodoZ21[label=<<table><tr><td>Seno</td></tr><tr><td>0.042</td></tr></table>>]
+				nodoz18[label="3.1"]			}
+			subgraph cluster6{
+				nodo7[label=<<table><tr><td>Suma</td></tr><tr><td>2.042</td></tr></table>>]
+				nodoB14[label=<<table><tr><td>Seno</td></tr><tr><td>0.042</td></tr></table>>]
+				nodoB17[label ="3.1"]
+				nodo22[label="2"]
+			}
+}

@@ -2,6 +2,8 @@ from abs import *
 from numeros import numeros
 from operaciones import Datos_O
 from trigonometricas import Trigonometrica
+from operacionestri import datatri
+
 class Aritmetica(expression):
     
     def __init__(self, izq,der,tipo,fila,columna) -> None:
@@ -50,8 +52,10 @@ class Aritmetica(expression):
             z = isinstance(self.izq,Trigonometrica)
             if x == True:
                 return self.izq.getNum()
-            else:
+            elif y == True:
                 return self.izq.getNum()
+            elif z == True:
+                return datatri(self.izq.getNum(),self.izq.getTipo(),round(self.izq.operar(None),3))
 
         else:
             return None
@@ -60,10 +64,13 @@ class Aritmetica(expression):
         if self.der != None:
             x = isinstance(self.der,numeros)
             y = isinstance(self.der,Aritmetica)
+            z = isinstance(self.der,Trigonometrica)
             if x == True:
                 return self.der.getNum()
             elif y == True:
                 return Datos_O(self.der.getTipo(),self.der.getLeft(),self.der.getRight(),self.der.operar(None))
+            elif z == True:
+                return datatri(self.der.getNum(),self.der.getTipo(),round(self.der.operar(None),3))
         else:
             return None
     

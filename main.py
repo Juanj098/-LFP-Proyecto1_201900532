@@ -4,8 +4,8 @@ from trigonometricas import *
 from lexema import *
 from numeros import *
 from operaciones import Datos_O
-from operaciones import list_operaciones
-import inspect
+from Data_g import grafica
+from Data_g import list_graph
 
 doc = 'datos.json'
 lexemas = list(reserv.values())
@@ -125,7 +125,7 @@ def operar():
         
         if operacion and n1 and n2:
             return Aritmetica(n1, n2, operacion,f'Inicio:{operacion.getFila()}:{operacion.getCol()}',f'fin:{n2.getFila()}:{n2.getCol()}')
-        elif operacion and n1 and operacion.operar(None) == ('Seno' or 'Coseno' or 'Tangente'):
+        elif operacion and n1 and operacion.operar(None) == 'Seno' or operacion and n1 and operacion.operar(None) =='Coseno' or operacion and n1 and operacion.operar(None) =='Tangente':
             return Trigonometrica(n1, operacion,f'Inicio:{operacion.getFila()}:{operacion.getCol()}',f'Fin:{n1.getFila()}:{n1.getCol()}')
     return None
 
@@ -137,11 +137,29 @@ def operar_():
             instrucciones.append(operacion)
         else:
             break
-    
-    # for instruccion in instrucciones:
-    #     print('-?',instruccion.operar(None))
-
     return instrucciones
+
+def Data_gr():
+    global list_lexemas
+    global instrucciones
+    txt = ''
+    font =''
+    c_nodo =''
+    forma =''
+    while list_lexemas:
+        lexema =list_lexemas.pop(0)
+        if lexema.operar(None) == 'Texto':
+            txt = list_lexemas.pop(0)
+        elif lexema.operar(None) == 'Color-Fondo-Nodo':
+            c_nodo = list_lexemas.pop(0)
+        elif lexema.operar(None) == 'Color-Fuente-Nodo':
+            font = list_lexemas.pop(0)
+        elif lexema.operar(None) == 'Forma-Nodo':
+            forma = list_lexemas.pop(0)
+        if txt and font and c_nodo and forma:
+            return grafica(txt,c_nodo,font,forma)    
+    return None
+
 
 cont = '''{
     {
@@ -182,10 +200,7 @@ cont = '''{
     "Color-Fuente-Nodo":"Rojo"
     "Forma-Nodo":"Circulo"
 }'''
- 
 
 
-# instruccion(cont)
-# operar_()
 
 

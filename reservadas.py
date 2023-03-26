@@ -28,3 +28,36 @@ reserv = {
     "llaveDer"      :"}",
 
 }
+
+colors = {
+    "Rojo":"#ff0000",
+    "Verde":"#00854c",
+    "Azul":"#003ee3",
+    "Amarillo":"#ffe748",
+    "Morado":"#4e1a4f",
+    "Blanco":"#f8f5ff",
+    "Gris":"#707070",
+    "Celeste":"#11c5ff",
+    "Anaranjado":"#ff6b00",
+    "Lila":"#99339b",
+    "Negro":"#242424",
+    "Cafe":"#7c624a",
+    "Rosado":"#ff54ee",
+    "Mostaza":"#b29032",
+    "Cyan":"#008b8b",
+}
+
+formas ={
+    'Circulo':'circle',
+    'Cuadrado':'square',
+    'Triangulo':'triangle',
+    'Ovalo':'oval',
+    'Diamante':'diamond',
+    'Rectangulo':'rectangle',
+    'Cilindro':'cylinder',
+    'Pentagono':'pentagon',
+    'Caja':'box',
+    'Octagono':'octagon',
+    'Estrella':'star',
+
+}

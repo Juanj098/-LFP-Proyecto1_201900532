@@ -32,7 +32,7 @@ class Trigonometrica(expression):
     def getNum(self):
         x = isinstance(self.left,numeros)
         if x == True:
-            return datatri(self.left.getNum(),self.getTipo())
+            return self.left.getNum()
         else:
             return self.left
     
