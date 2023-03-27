@@ -41,7 +41,7 @@
             "Valor1":3.1
     ]},
     {
-        "Operacion":"Suma" 
+        "Operacion":"Multiplicacion" 
         "Valor1":[ 
             "Operacion":"Seno" 
             "Valor1":3.1
@@ -50,10 +50,12 @@
     }, 
 
         "Texto":"Realizacion de Operaciones" 
-        "Color-Fondo-Nodo":"Rojo" 
+        "Color-Fondo-Nodo":"Azul" 
         "Color-Fuente-Nodo":"Blanco"
-        "Forma-Nodo":"Circulo"
+        "Forma-Nodo":"Cilindro"
 }
+
+
 
 
 

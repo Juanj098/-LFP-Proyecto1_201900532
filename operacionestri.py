@@ -14,4 +14,12 @@ class datatri:
         return self.res
     
     def ret(self):
-        return f'tipo -> {self.tipo.getLexema()}, izq -> {self.left}, res -> {self.res}'
+        return f'{self.opeS()}{self.left}), res -> {self.res}'
+    
+    def opeS(self):
+        if self.tipo.getLexema() == 'Seno':
+            return 'Sin('
+        elif self.tipo.getLexema() == 'Tangente':
+            return 'Tan('
+        elif self.tipo.getLexema() == 'Coseno':
+            return 'Cos('

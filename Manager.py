@@ -7,7 +7,7 @@ class Window(tk.Tk):
     def __init__(self,*args,**kwargs) -> None:
         super().__init__(*args,**kwargs)
         self.title('Proyecto no.1')
-        self.geometry('800x500')
+        self.geometry('1250x500')
         container = tk.Frame(self)
         container.pack(
             side = tk.TOP,

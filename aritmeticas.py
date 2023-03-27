@@ -53,7 +53,7 @@ class Aritmetica(expression):
             if x == True:
                 return self.izq.getNum()
             elif y == True:
-                return self.izq.getNum()
+                return Datos_O(self.izq.getTipo(),self.izq.getLeft(),self.izq.getRight(),self.izq.operar(None))
             elif z == True:
                 return datatri(self.izq.getNum(),self.izq.getTipo(),round(self.izq.operar(None),3))
 

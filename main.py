@@ -6,7 +6,8 @@ from numeros import *
 from operaciones import Datos_O
 from Data_g import grafica
 from Data_g import list_graph
-
+from error import Errores
+from error import list_error
 doc = 'datos.json'
 lexemas = list(reserv.values())
 
@@ -20,11 +21,12 @@ n_lineas = 1
 n_col = 1
 instrucciones = []
 list_lexemas = []
-
+list_errores = []
 def instruccion(cadena):
     global n_lineas
     global n_col
     global list_lexemas
+    global list_errores
     lexema = ''
     puntero = 0
 
@@ -67,6 +69,11 @@ def instruccion(cadena):
             n_lineas += 1
             n_col = 1
         else:
+            #for key, value in reserv.items():
+            #   if char != value:
+            if char != "{" and char != "}" and char != "[" and char != "]" and char != ":" and char != "," and char != "." and char != '\t' and char != ' ':
+                er = Errores(n_lineas,n_col,char)
+                list_error.append(er)
             cadena = cadena[1:]
             puntero = 0
             n_col += 1
@@ -162,45 +169,51 @@ def Data_gr():
 
 
 cont = '''{
+    { ?
     {
-        "Operacion":"Suma" 
-        "Valor1":4.5 
-        "Valor2":5.32
-    }, 
+        "Operacion":"Resta"
+        "Valor1":6.5
+        "Valor2":3.5
+    }, *
     {
-        "Operacion":"Resta" 
-        "Valor1":4.5 "Valor2": [ 
-            "Operacion":"Potencia" 
-            "Valor1":10 
-            "Valor2":3
-    ]},
-       {
-        "Operacion":"Suma" 
-        "Valor1":[ 
-            "Operacion":"Suma" 
-            "Valor1":90
-            "Valor2":90
-        ] 
-        "Valor2":500 
-    }, 
-    {
-        "Operacion":"Seno" 
-        "Valor1":90
+        "Operacion":"Multiplicacion" ^
+        "Valor1":[
+            "Operacion":"Seno"
+            "Valor1":2
+        ]
+        "Valor2": [
+            "Operacion":"Potencia"
+            "Valor1":2
+            "Valor2":2
+        ] +
     },
     {
-        "Operacion":"Suma" 
-        "Valor1":[ 
-            "Operacion":"Seno" 
-            "Valor1":90
-        ] 
-        "Valor2":5.32 
-    }
-    "Texto":"Realizacion de Operaciones" 
-    "Color-Fondo-Nodo":"Amarillo" 
+        "Operacion":"Suma"
+        "Valor1":[
+        "Operacion":"Seno"
+        "Valor1":90
+        ]
+        "Valor2":5.32
+    },
+    { ! $ %@
+        "Operacion":"Resta"
+        "Valor1": [
+            "Operacion": "Division"
+            "Valor1": 500
+            "Valor2": 100
+        ]
+        "Valor2": [
+            "Operacion": "Multiplicacion"
+            "Valor1": 10
+            "Valor2": 15
+     ]},
+    "Texto":"Realizacion de Operaciones"
+    "Color-Fondo-Nodo":"Amarillo"
     "Color-Fuente-Nodo":"Rojo"
     "Forma-Nodo":"Circulo"
-}'''
-
+    @
+}
+    '''
 
 
 
