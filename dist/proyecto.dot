@@ -1,0 +1,46 @@
+
+        digraph G{
+            rankdir = LR
+	        fontname="Helvetica,Arial,sans-serif"
+	        node [fontname="Helvetica,Arial,sans-serif"]
+            edge [fontname="Helvetica,Arial,sans-serif"]
+        	node [shape = "circle" color = "#ffe748" style = filled fontcolor = "#ff0000"]
+			subgraph cluster0{
+				nodo1[label=<<table><tr><td>Resta</td></tr><tr><td>3.0</td></tr></table>>]
+				nodo8[label="6.5"]
+				nodo1->nodo8
+				nodo16[label="3.5"]
+				nodo1->nodo16
+				nodo2[label=<<table><tr><td>Multiplicacion</td></tr><tr><td>3.637</td></tr></table>>]
+				nodoB9[label=<<table><tr><td>Seno</td></tr><tr><td>0.909</td></tr></table>>]
+				nodoB12[label ="2"]
+				nodo2->nodoB9
+				nodoB9->nodoB12
+				nodoY17[label=<<table><tr><td>Potencia</td></tr><tr><td>4</td></tr></table>>]
+				nodoY20[label="2"]
+				nodoY28[label="2"]
+				nodo2->nodoY17
+				nodoY17->nodoY20
+				nodoY17->nodoY28
+				nodo3[label=<<table><tr><td>Suma</td></tr><tr><td>6.214</td></tr></table>>]
+				nodoB10[label=<<table><tr><td>Seno</td></tr><tr><td>0.894</td></tr></table>>]
+				nodoB13[label ="90"]
+				nodo3->nodoB10
+				nodoB10->nodoB13
+				nodo18[label="5.32"]
+				nodo3->nodo18
+				nodo4[label=<<table><tr><td>Resta</td></tr><tr><td>-145.0</td></tr></table>>]
+				nodoA11[label=<<table><tr><td>Division</td></tr><tr><td>5.0</td></tr></table>>]
+				nodoA14[label="500"]
+				nodoA26[label="100"]
+				nodo4->nodoA11
+				nodoA11->nodoA14
+				nodoA11->nodoA26
+				nodoY19[label=<<table><tr><td>Multiplicacion</td></tr><tr><td>150</td></tr></table>>]
+				nodoY22[label="10"]
+				nodoY30[label="15"]
+				nodo4->nodoY19
+				nodoY19->nodoY22
+				nodoY19->nodoY30
+			}
+}

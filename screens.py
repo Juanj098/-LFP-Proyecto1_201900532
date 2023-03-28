@@ -99,7 +99,8 @@ class Home(tk.Frame):
             text="Manual de usuario",
             font=('Jetbrains mono',10),
             width=20,
-            height=2
+            height=1,
+            command=self.Usuario
         )
         btn5.grid(row=6,column=0,padx=3,pady=3)
         btn6 = tk.Button(
@@ -107,9 +108,19 @@ class Home(tk.Frame):
             text="Manual Tecnico",
             font=('Jetbrains mono',10),
             width=20,
-            height=2
+            height=1,
+            command=self.Tecnico
         )
         btn6.grid(row=7,column=0,padx=3,pady=3)
+        btn7 = tk.Button(
+            optionsFrame_Izq,
+            text="Temas de Ayuda",
+            font=("Jetbrains mono",10),
+            width=20,
+            height=1,
+            command=self.Dev
+        )
+        btn7.grid(row=8, column=0,padx=3,pady=3)
         btn8 = tk.Button(
             optionsFrame_Izq,
             text="SALIR",
@@ -118,7 +129,7 @@ class Home(tk.Frame):
             height=2,
             command= self.quit
         )
-        btn8.grid(row=8,column=0,padx=3,pady=3)
+        btn8.grid(row=9,column=0,padx=3,pady=3)
 
 #-> der
         optionsFrame_Der = tk.Frame(self)
@@ -220,8 +231,8 @@ class Home(tk.Frame):
                 cadena+=f'\t\t\t\t"Lexema":{err.geterror()}\n'
                 cadena+=f'\t\t\t\t"Tipo":Error\n'
                 cadena+=f'\t\t\t\t"Columna":{err.getCol()}\n'
-                cadena+=f'\t\t\t\t"Columna":{err.getFila()}\n'
-                cadena+='\t\t}'
+                cadena+=f'\t\t\t\t"Fila":{err.getFila()}\n'
+                cadena+='\t\t}\n'
                 cadena+='\t},\n'
                 cont = cont+1
         cadena+='}'
@@ -302,6 +313,18 @@ class Home(tk.Frame):
 
     def pdfGraph(self):
         path ='proyecto.pdf'
+        webbrowser.open_new(path)
+    
+    def Usuario(self):
+        path = 'Manual de usuario.pdf'
+        webbrowser.open_new(path)
+
+    def Tecnico(self):
+        path = 'Manual Tecnico.pdf'
+        webbrowser.open_new(path)
+    
+    def Dev(self):
+        path = 'Datos.pdf'
         webbrowser.open_new(path)
 
 

@@ -4,43 +4,54 @@
 	        fontname="Helvetica,Arial,sans-serif"
 	        node [fontname="Helvetica,Arial,sans-serif"]
             edge [fontname="Helvetica,Arial,sans-serif"]
-        	node [shape = "circle" color = "#ffe748" style = filled fontcolor = "#ff0000"]
+        	node [shape = "cylinder" color = "#003ee3" style = filled fontcolor = "#f8f5ff"]
 			subgraph cluster0{
-				nodo1[label=<<table><tr><td>Resta</td></tr><tr><td>3.0</td></tr></table>>]
-				nodo8[label="6.5"]
+				nodo1[label=<<table><tr><td>Suma</td></tr><tr><td>10.122</td></tr></table>>]
+				nodo8[label="4.8"]
 				nodo1->nodo8
-				nodo16[label="3.5"]
+				nodo16[label="5.322"]
 				nodo1->nodo16
-				nodo2[label=<<table><tr><td>Multiplicacion</td></tr><tr><td>3.637</td></tr></table>>]
-				nodoB9[label=<<table><tr><td>Seno</td></tr><tr><td>0.909</td></tr></table>>]
-				nodoB12[label ="2"]
-				nodo2->nodoB9
-				nodoB9->nodoB12
-				nodoY17[label=<<table><tr><td>Potencia</td></tr><tr><td>4</td></tr></table>>]
-				nodoY20[label="2"]
-				nodoY28[label="2"]
+				nodo2[label=<<table><tr><td>Resta</td></tr><tr><td>-9995.5</td></tr></table>>]
+				nodo9[label="4.5"]
+				nodo2->nodo9
+				nodoY17[label=<<table><tr><td>Potencia</td></tr><tr><td>10000</td></tr></table>>]
+				nodoY20[label="10"]
+				nodoY28[label="4"]
 				nodo2->nodoY17
 				nodoY17->nodoY20
 				nodoY17->nodoY28
-				nodo3[label=<<table><tr><td>Suma</td></tr><tr><td>6.214</td></tr></table>>]
-				nodoB10[label=<<table><tr><td>Seno</td></tr><tr><td>0.894</td></tr></table>>]
+				nodo3[label=<<table><tr><td>Suma</td></tr><tr><td>3.325</td></tr></table>>]
+				nodoB10[label=<<table><tr><td>Tangente</td></tr><tr><td>-1.995</td></tr></table>>]
 				nodoB13[label ="90"]
 				nodo3->nodoB10
 				nodoB10->nodoB13
 				nodo18[label="5.32"]
 				nodo3->nodo18
-				nodo4[label=<<table><tr><td>Resta</td></tr><tr><td>-145.0</td></tr></table>>]
-				nodoA11[label=<<table><tr><td>Division</td></tr><tr><td>5.0</td></tr></table>>]
-				nodoA14[label="500"]
-				nodoA26[label="100"]
-				nodo4->nodoA11
-				nodoA11->nodoA14
-				nodoA11->nodoA26
-				nodoY19[label=<<table><tr><td>Multiplicacion</td></tr><tr><td>150</td></tr></table>>]
-				nodoY22[label="10"]
-				nodoY30[label="15"]
-				nodo4->nodoY19
-				nodoY19->nodoY22
-				nodoY19->nodoY30
+				nodo4[label=<<table><tr><td>Suma</td></tr><tr><td>10</td></tr></table>>]
+				nodo11[label="5"]
+				nodo4->nodo11
+				nodo19[label="5"]
+				nodo4->nodo19
+				nodo5[label=<<table><tr><td>Suma</td></tr><tr><td>6.214</td></tr></table>>]
+				nodoB12[label=<<table><tr><td>Seno</td></tr><tr><td>0.894</td></tr></table>>]
+				nodoB15[label ="90"]
+				nodo5->nodoB12
+				nodoB12->nodoB15
+				nodo20[label="5.32"]
+				nodo5->nodo20
+				nodo6[label=<<table><tr><td>Resta</td></tr><tr><td>1.958</td></tr></table>>]
+				nodo13[label="2"]
+				nodo6->nodo13
+				nodoZ21[label=<<table><tr><td>Seno</td></tr><tr><td>0.042</td></tr></table>>]
+				nodoZ18[label="3.1"]
+				nodo6->nodoZ21
+				nodoZ21->nodoZ18
+				nodo7[label=<<table><tr><td>Multiplicacion</td></tr><tr><td>0.083</td></tr></table>>]
+				nodoB14[label=<<table><tr><td>Seno</td></tr><tr><td>0.042</td></tr></table>>]
+				nodoB17[label ="3.1"]
+				nodo7->nodoB14
+				nodoB14->nodoB17
+				nodo22[label="2"]
+				nodo7->nodo22
 			}
 }
